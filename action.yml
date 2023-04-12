@@ -1,6 +1,9 @@
-name: 'SharePoint File Upload'
+name: 'Push2SharePoint'
 description: 'Upload a file to SharePoint using Office 365 REST API'
 author: 'sjultra inc.'
+branding:
+  icon: 'upload-cloud'
+  color: 'blue'
 inputs:
   username:
     description: 'SharePoint username'
