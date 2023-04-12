@@ -1,6 +1,6 @@
 name: 'SharePoint File Upload'
 description: 'Upload a file to SharePoint using Office 365 REST API'
-author: 'Your Name'
+author: 'Sjultra inc.'
 inputs:
   username:
     description: 'SharePoint username'
