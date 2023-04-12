@@ -1,26 +1,32 @@
-name: 'Push2SharePoint'
-description: 'Upload a file to SharePoint using Office 365 REST API'
-author: 'sjultra inc.'
-branding:
-  icon: 'upload-cloud'
-  color: 'blue'
-inputs:
-  username:
-    description: 'SharePoint username'
-    required: true
-  password:
-    description: 'SharePoint password'
-    required: true
-  file_name:
-    description: 'File name to upload'
-    required: true
-  full_url:
-    description: 'SharePoint site URL'
-    required: true
-  target_subfolder:
-    description: 'Target subfolder for the file'
-    required: true
+name: Manual SharePoint File Upload
 
-runs:
-  using: 'docker'
-  image: 'Dockerfile'
+on:
+  workflow_dispatch:
+    inputs:
+      file_name:
+        description: 'The name of the file to upload'
+        required: true
+      full_url:
+        description: 'The full URL of the SharePoint site'
+        required: true
+      target_subfolder:
+        description: 'The subfolder in the document library where the file should be uploaded'
+        required: true
+
+jobs:
+  run_sharepoint_file_upload:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+      
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.8
+
+    - name: Install dependencies
+      run: pip install Office365-REST-Python-Client
+
+    - name: Upload file to SharePoint
+      run: python upload_to_sharepoint.py ${{ secrets.USERNAME }} ${{ secrets.PASSWORD }} ${{ github.event.inputs.file_name }} ${{ github.event.inputs.full_url }} ${{ github.event.inputs.target_subfolder }}
