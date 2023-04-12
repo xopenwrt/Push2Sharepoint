@@ -1,0 +1,23 @@
+name: 'SharePoint File Upload'
+description: 'Upload a file to SharePoint using Office 365 REST API'
+author: 'Your Name'
+inputs:
+  username:
+    description: 'SharePoint username'
+    required: true
+  password:
+    description: 'SharePoint password'
+    required: true
+  file_name:
+    description: 'File name to upload'
+    required: true
+  full_url:
+    description: 'SharePoint site URL'
+    required: true
+  target_subfolder:
+    description: 'Target subfolder for the file'
+    required: true
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
