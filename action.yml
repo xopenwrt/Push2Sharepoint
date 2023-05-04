@@ -34,5 +34,5 @@ runs:
       run: ls -R
       shell: bash
 
-    - run: python action/upload_to_sharepoint.py ${{ inputs.username }} ${{ inputs.password }} ${{ inputs.file_name }} ${{ inputs.full_url }} ${{ inputs.target_subfolder }}
+    - run: python action/Push2Sharepoint.py ${{ inputs.username }} ${{ inputs.password }} ${{ inputs.file_name }} ${{ inputs.full_url }} ${{ inputs.target_subfolder }}
       shell: bash
