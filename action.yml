@@ -23,6 +23,8 @@ inputs:
 runs:
   using: 'composite'
   steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
     - run: pip install Office365-REST-Python-Client
       shell: bash
     - run: python upload_to_sharepoint.py ${{ inputs.username }} ${{ inputs.password }} ${{ inputs.file_name }} ${{ inputs.full_url }} ${{ inputs.target_subfolder }}
