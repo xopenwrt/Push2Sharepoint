@@ -28,8 +28,6 @@ runs:
       with:
         path: './action'
     - run: pip install Office365-REST-Python-Client
-      shell: bash
     - name: List files in repository
       run: ls -R
     - run: python ./action/upload_to_sharepoint.py ${{ inputs.username }} ${{ inputs.password }} ${{ inputs.file_name }} ${{ inputs.full_url }} ${{ inputs.target_subfolder }}
-      shell: bash
