@@ -4,7 +4,7 @@ import logging
 
 from office365.runtime.auth.authentication_context import AuthenticationContext
 from office365.sharepoint.client_context import ClientContext
-from office365.sharepoint.files.system_object_type import FileSystemObjectType
+from office365.sharepoint.fileSystemObjectType import FileSystemObjectType
 
 # Setting up the logging
 logging.basicConfig(level=logging.INFO, format='%(levelname)s: %(message)s')
