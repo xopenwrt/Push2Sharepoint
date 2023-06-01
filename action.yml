@@ -43,11 +43,5 @@ runs:
       shell: bash
 
     - name: Run script
-      run: python action/Push2Sharepoint.py --username ${{ env.USERNAME }} --password ${{ env.PASSWORD }} --site_url ${{ env.FULL_URL }} --folder_name ${{ env.TARGET_SUBFOLDER }} --documents ${{ env.FILE_NAME }}
+      run: python action/Push2Sharepoint.py  --username '${{ inputs.username }}' --password '${{ inputs.password }}' --site_url '${{ inputs.full_url }}'  --folder_name '${{ inputs.target_subfolder }}'  --documents '${{ inputs.file_name }}' 
       shell: bash
-      env:
-        USERNAME: ${{ inputs.username }}
-        PASSWORD: ${{ inputs.password }}
-        FULL_URL: ${{ inputs.full_url }}
-        TARGET_SUBFOLDER: ${{ inputs.target_subfolder }}
-        FILE_NAME: ${{ inputs.file_name }}
