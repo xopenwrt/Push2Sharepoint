@@ -40,5 +40,5 @@ runs:
       run: ls -R
       shell: bash
 
-    - run: python action/Push2Sharepoint.py ${{ inputs.username }} ${{ inputs.password }} ${{ inputs.file_name }} ${{ inputs.full_url }} ${{ inputs.target_subfolder }}
+     - run: python action/Push2Sharepoint.py  --username ${{ inputs.username }} --password ${{ inputs.password }} --site_url ${{ inputs.full_url }}  --folder_name ${{ inputs.target_subfolder }}  --documents ${{ inputs.file_name }} 
       shell: bash
