@@ -1,5 +1,5 @@
 name: 'Push2SharePoint'
-description: 'Upload a file to a SharePoint document library'
+description: 'Upload files to a SharePoint document library'
 author: 'sjultra inc.'
 branding:
   icon: 'upload-cloud'
