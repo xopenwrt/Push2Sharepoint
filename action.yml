@@ -31,7 +31,7 @@ runs:
         path: './action'
         
     - name: Install Office365-REST-Python-Client
-      run: pip install Office365-REST-Python-Client==2.2.0
+      run: pip install Office365-REST-Python-Client
       shell: bash
       
     - name: Check package version
