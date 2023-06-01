@@ -26,7 +26,7 @@ To use this action in your workflow, add the following step to your `.github/wor
 ```yaml
 steps:
   - name: Upload file to SharePoint
-    uses: sjultra/Push2Sharepoint@v1.0.1
+    uses: sjultra/Push2Sharepoint@v3
     with:
       username: ${{ secrets.SHAREPOINT_USERNAME }}
       password: ${{ secrets.SHAREPOINT_PASSWORD }}
