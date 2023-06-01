@@ -29,7 +29,9 @@ runs:
         repository: 'sjultra/Push2Sharepoint' # Replace with the reusable action's owner and repo name
         ref: 'v1.0.12' # Replace with the desired branch, commit, or tag
         path: './action'
-    - run: pip install Office365-REST-Python-Client==2.2.0
+        
+    - name: Install Office365-REST-Python-Client
+      run: pip install Office365-REST-Python-Client==2.2.0
       shell: bash
       
     - name: Check package version
@@ -40,5 +42,12 @@ runs:
       run: ls -R
       shell: bash
 
-     - run: python action/Push2Sharepoint.py  --username ${{ inputs.username }} --password ${{ inputs.password }} --site_url ${{ inputs.full_url }}  --folder_name ${{ inputs.target_subfolder }}  --documents ${{ inputs.file_name }} 
+    - name: Run script
+      run: python action/Push2Sharepoint.py --username ${{ env.USERNAME }} --password ${{ env.PASSWORD }} --site_url ${{ env.FULL_URL }} --folder_name ${{ env.TARGET_SUBFOLDER }} --documents ${{ env.FILE_NAME }}
       shell: bash
+      env:
+        USERNAME: ${{ inputs.username }}
+        PASSWORD: ${{ inputs.password }}
+        FULL_URL: ${{ inputs.full_url }}
+        TARGET_SUBFOLDER: ${{ inputs.target_subfolder }}
+        FILE_NAME: ${{ inputs.file_name }}
