@@ -36,6 +36,8 @@ steps:
  ```
 Replace the placeholders with your actual information, and make sure to store your SharePoint credentials as encrypted secrets in your repository.
 
+## [Contributing guide](./Contributing.md)
+
 ## License
 This GitHub Action is released under the [MIT License](./LICENSE).
 
