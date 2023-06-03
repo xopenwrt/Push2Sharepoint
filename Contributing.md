@@ -93,8 +93,9 @@ We will review your pull request and provide feedback. Once approved, your chang
 
 Upon creating a new release all the versions should be increased to match the version of the planned release.
 The following files contain hardcoded values of the version: 
-[README.md](./README.md)
-[action.yml](./action.yml)
+
+1. [README.md](./README.md)
+1. [action.yml](./action.yml)
 
 
 
