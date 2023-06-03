@@ -17,7 +17,7 @@ parser.add_argument('--username', required=True, help='SharePoint username')
 parser.add_argument('--password', required=True, help='SharePoint password')
 parser.add_argument('--site_url', required=True, help='SharePoint site URL')
 parser.add_argument('--folder_name', required=True, help='SharePoint folder name')
-parser.add_argument('--documents', required=True, nargs='+', help='Documents to upload')
+parser.add_argument('--documents', required=True, help='Documents to upload')
 
 args = parser.parse_args()
 
@@ -116,5 +116,6 @@ class SharePointFileManager:
 if __name__ == '__main__':
     # Initialize the SharePointFileManager class
     sp = SharePointFileManager(args.username, args.password, args.site_url)
+    documents=args.documents.split(',')
     # Execute the file uploading
-    sp.execute(args.folder_name, args.documents)
+    sp.execute(args.folder_name, documents)
