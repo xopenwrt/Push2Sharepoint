@@ -69,25 +69,24 @@ If you encounter any issues or bugs, please submit them using the issue tracker.
 To contribute code or documentation changes:
 
 1. Fork the repository and create a new branch for your contribution.
-2. Make the necessary changes in your branch.
-3. Test your changes thoroughly.
-4. Submit a pull request to the main repository, clearly describing the purpose of the pull request and any relevant information or context.
+1. Make the necessary changes in your branch.
+1. Test your changes thoroughly.
+1. Submit a pull request to the main repository, clearly describing the purpose of the pull request and any relevant information or context.
 
 We will review your pull request and provide feedback. Once approved, your changes will be merged into the main repository.
 
 ## Coding Guidelines
 
-Imports: The imports are grouped at the beginning of the script, separated by empty lines. They are organized in a logical order, with standard library imports first and third-party imports next.
-Logging: The logging module is used for setting up logging. Three basicConfig calls are made with different logging levels and formats.
-Argument Parsing: The argparse module is used to parse command-line arguments. The ArgumentParser instance is created, and arguments are added with descriptions and required attributes.
-Class Definition: The SharePointFileManager class is defined with its constructor and various methods. The methods are separated by empty lines for better readability.
-Private Methods: Private methods of the class are prefixed with an underscore (_) to indicate their visibility.
-Docstrings: Docstrings are provided for class, methods, and functions to describe their purpose and usage. The docstrings follow the recommended style of enclosing the text in triple quotes.
-Variable Naming: Variable names are meaningful and follow the snake_case naming convention. They are descriptive and help in understanding their purpose.
-Whitespace: Appropriate use of whitespace, such as blank lines between logical sections and indentation, improves readability.
-Conditional Statements: The if statements are properly indented and follow the recommended style of using a space before and after the comparison operator.
-String Formatting: f-strings are used for string interpolation, which allows variables to be directly inserted within strings for better readability.
-These are some of the observed code guidelines. It's important to note that specific projects or organizations may have their own coding guidelines, and it's recommended to follow those guidelines for consistency within the project or team.
+1. Imports: The imports are grouped at the beginning of the script, separated by empty lines. They are organized in a logical order, with standard library imports first and third-party imports next.
+1. Logging: The logging module is used for setting up logging. Three basicConfig calls are made with different logging levels and formats.
+1. Argument Parsing: The argparse module is used to parse command-line arguments. The ArgumentParser instance is created, and arguments are added with descriptions and required attributes.
+1. Class Definition: The SharePointFileManager class is defined with its constructor and various methods. The methods are separated by empty lines for better readability.
+1. Private Methods: Private methods of the class are prefixed with an underscore (_) to indicate their visibility.
+1. Docstrings: Docstrings are provided for class, methods, and functions to describe their purpose and usage. The docstrings follow the recommended style of enclosing the text in triple quotes.
+1. Variable Naming: Variable names are meaningful and follow the snake_case naming convention. They are descriptive and help in understanding their purpose.
+1. Whitespace: Appropriate use of whitespace, such as blank lines between logical sections and indentation, improves readability.
+1. Conditional Statements: The if statements are properly indented and follow the recommended style of using a space before and after the comparison operator.
+1. String Formatting: f-strings are used for string interpolation, which allows variables to be directly inserted within strings for better readability.
 
 
 ## Release procedure
