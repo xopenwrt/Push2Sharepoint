@@ -26,11 +26,11 @@ To use this action in your workflow, add the following step to your `.github/wor
 ```yaml
 steps:
   - name: Upload file to SharePoint
-    uses: sjultra/Push2Sharepoint@v3.2
+    uses: sjultra/Push2Sharepoint@v3.3
     with:
       username: ${{ secrets.SHAREPOINT_USERNAME }}
       password: ${{ secrets.SHAREPOINT_PASSWORD }}
-      file_name: 'your-file-name.ext'
+      file_name: 'your-file-name.ext,your-file-name.ext,you-file-name.ext'
       full_url: 'https://your-domain.sharepoint.com/sites/your-site-name'
       target_subfolder: 'Shared Documents/your-target-folder'
  ```
