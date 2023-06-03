@@ -116,6 +116,5 @@ class SharePointFileManager:
 if __name__ == '__main__':
     # Initialize the SharePointFileManager class
     sp = SharePointFileManager(args.username, args.password, args.site_url)
-    documents=args.documents.split(",")
     # Execute the file uploading
-    sp.execute(args.folder_name, documents)
+    sp.execute(args.folder_name, args.documents)
