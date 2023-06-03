@@ -27,7 +27,7 @@ runs:
       uses: actions/checkout@v2
       with:
         repository: 'sjultra/Push2Sharepoint' # Replace with the reusable action's owner and repo name
-        ref: 'v3.2' # Replace with the desired branch, commit, or tag
+        ref: 'v3.3' # Replace with the desired branch, commit, or tag
         path: './action'
         
     - name: Install Office365-REST-Python-Client
