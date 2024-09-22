@@ -43,7 +43,7 @@ class SharePointFileManager:
     
     #function to retrieve all Folders and Subfolders from SharePoint
     def get_all_folders_and_files(self):
-        doc_lib = self.context.web.lists.get_by_title("Documents")
+        doc_lib = self.context.web.lists.get_by_title("文档")
         items = doc_lib.items.select(["FileSystemObjectType"]).expand(["File","Folder"]).get_all().execute_query()
         for item in items:  # type: ListItem
             if item.file_system_object_type == FileSystemObjectType.Folder:
